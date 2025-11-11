@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'add_meal_screen.dart';
 
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
@@ -32,7 +33,10 @@ class DashboardScreen extends StatelessWidget {
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
-                // later: navigate to Add Meal page
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AddMealScreen()),
+                );
               },
               child: const Text('Add Meal'),
             ),
@@ -56,3 +60,5 @@ class DashboardScreen extends StatelessWidget {
     );
   }
 }
+
+// to run type: flutter run -d chrome in terminal
